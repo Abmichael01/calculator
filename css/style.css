@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+
+body {
+  background-image: url(/images/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bg-sign {
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  font-size: 550px;
+  font-weight: 900;
+  color: rgba(198, 198, 198, 0.3647058824);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: move-bg 60s linear infinite;
+}
+
+@keyframes move-bg {
+  0% {
+    top: -100px;
+    right: -50px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 100px;
+    right: 800px;
+    transform: rotate(360deg);
+  }
+  100% {
+    top: -100px;
+    right: -50px;
+    transform: rotate(0deg);
+  }
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border: 0.1px solid #c6c6c6;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  background: none;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 999;
+}
+.calculator .screen {
+  height: 120px;
+  border: 0.1px solid #c6c6c6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.calculator .screen p {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-right: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.calculator .screen .screen1 {
+  font-size: 20px;
+  height: 40%;
+}
+.calculator .screen .screen2 {
+  font-size: 45px;
+  height: 60%;
+}
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+}
+.calculator .buttons button {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  background: none;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: none;
+  border: 0.1px solid #c6c6c6;
+  color: #d9d9d9;
+  background: rgba(198, 198, 198, 0.1137254902);
+  cursor: pointer;
+  transition: 0.1s;
+}
+.calculator .buttons button:hover {
+  background: rgba(198, 198, 198, 0.5098039216);
+}
+.calculator .buttons button:active {
+  transform: scale(0.95);
+}
+.calculator .buttons .operator {
+  background: rgba(198, 198, 198, 0.3176470588);
+  font-size: 25px;
+}
+.calculator .buttons .backspace {
+  background: rgba(198, 198, 198, 0.3176470588);
+  font-size: 25px;
+}

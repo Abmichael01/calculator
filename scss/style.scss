@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto";
+}
+
+body{
+    // background-image: linear-gradient(to right top, #8680ff, #00b1ff, #00d5ff, #00efd6, #52ff86);
+    background-image: url(/images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-sign{
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    font-size: 550px;
+    font-weight: 900;
+    color: #c6c6c65d;
+    backdrop-filter: blur(50px);
+    height: 600px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    border-radius: 50%;
+    animation: move-bg 60s linear infinite;
+}
+
+@keyframes move-bg {
+    0%{
+        top: -100px;
+        right: -50px;
+        transform: rotate(0deg);
+    }50%{
+        top: 100px;
+        right: 800px;
+        transform: rotate(360deg);
+    }100%{
+        top: -100px;
+        right: -50px;
+        transform: rotate(0deg);
+    }
+}
+
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 0.1px solid #c6c6c6;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    background: none;
+    backdrop-filter: blur(20px);
+    position: relative;
+    z-index: 999;
+
+    .screen{
+        height: 120px;
+        border: 0.1px solid #c6c6c6;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p{
+            display: flex;
+            align-items: center;
+            color: #fff;
+            padding-right: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+
+        .screen1{
+            font-size: 20px;
+            height: 40%;
+        }
+        .screen2{
+            font-size: 45px;
+            height: 60%;
+        }
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 20px;
+
+        button{
+            height: 50px;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: 700;
+            background: none;
+            // background: #fff;
+            backdrop-filter: blur(10px);
+            border: none;
+            border: 0.1px solid #c6c6c6;
+            color: #d9d9d9;
+            background: #c6c6c61d;
+            cursor: pointer;
+            transition: .1s;
+        }
+
+        button:hover{
+            background: #c6c6c682;
+        }
+
+        button:active{
+            transform: scale(0.95);
+        }
+
+        .operator{
+            background: #c6c6c651;
+            font-size: 25px;
+        }
+
+        .backspace{
+            background: #c6c6c651;
+            font-size: 25px;
+        }
+    }
+}
