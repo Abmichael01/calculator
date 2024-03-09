@@ -124,3 +124,12 @@ body {
   background: rgba(198, 198, 198, 0.3176470588);
   font-size: 25px;
 }
+
+@media screen and (max-width: 425) {
+  body {
+    padding: 0px 20px;
+  }
+  .calculator {
+    width: 100%;
+  }
+}

@@ -134,3 +134,13 @@ body{
         }
     }
 }
+
+@media screen and (max-width: 425) {
+    body{
+        padding: 0px 20px;
+    }
+
+    .calculator{
+        width: 100%;
+    }
+}
